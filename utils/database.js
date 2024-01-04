@@ -9,7 +9,7 @@ export const connecttoDB = async ()=>{
         return;
     }
     try {
-        await mongoose.connect("mongodb+srv://prakharkhatri123:prakhar@dashboard.p48hgl9.mongodb.net/?retryWrites=true&w=majority",{
+        await mongoose.connect(process.env.MONGODB_URL,{
             dbName:"Dashboard",
             useUnifiedTopology:true,
             useNewUrlParser:true
